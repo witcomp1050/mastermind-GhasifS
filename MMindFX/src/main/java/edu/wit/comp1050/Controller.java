@@ -192,6 +192,14 @@ public class Controller {
         colorChanger.clearGameBoard();
     }
 
+    @FXML
+    void showAbout() throws IOException {
+        Parent configParent = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("about.fxml")));
+        Scene configScene = new Scene(configParent);
+        Stage window = (Stage) mainMenuBar.getScene().getWindow();
+        window.setScene(configScene);
+        window.show();
+    }
 
     @FXML
     void configApp() throws IOException {
